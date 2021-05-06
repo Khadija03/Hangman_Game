@@ -6,7 +6,7 @@
 #include"JeuMulti.h"
 #include<string>
 #include<vector>
-#define _GLIBCXX_USE_CXX11_ABI 0
+
 using namespace std;
 JeuMulti::JeuMulti(vector<Joueur*> j):Jeu(j)
 {
