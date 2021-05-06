@@ -1,0 +1,244 @@
+# depslib dependency file v1.0
+1620267684 source:c:\users\khadija\documents\td1c\projet\main.cpp
+	<iostream>
+	"Joueur.h"
+	<string>
+	<vector>
+	"Jeu.h"
+	"Jeu.cpp"
+	"JeuSolo.h"
+	"JeuSolo.cpp"
+	"JeuMulti.cpp"
+	"JeuMulti.h"
+	"Machine.h"
+	"Humain.h"
+
+1620261081 c:\users\khadija\documents\td1c\projet\joueur.h
+	<string>
+
+1620263056 source:c:\users\khadija\documents\td1c\projet\joueur.cpp
+	<iostream>
+	<string>
+	"Joueur.h"
+
+1620334986 c:\users\khadija\documents\td1c\projet\machine.h
+	<string>
+	"Joueur.h"
+	"Lecteur.h"
+
+1620337399 source:c:\users\khadija\documents\td1c\projet\machine.cpp
+	<iostream>
+	<string.h>
+	<cstdlib>
+	"Machine.h"
+	"Joueur.h"
+	<string>
+	"Lecteur.h"
+	<cstdlib>
+	<ctime>
+
+1620261081 c:\users\khadija\documents\td1c\projet\humain.h
+	<string>
+	"Joueur.h"
+
+1620263572 source:c:\users\khadija\documents\td1c\projet\humain.cpp
+	<iostream>
+	<string>
+	"Humain.h"
+
+1620265810 source:c:\users\khadija\documents\td1c\projet\jeu.cpp
+	<iostream>
+	"Joueur.h"
+	"Jeu.h"
+	"Machine.h"
+	"Humain.h"
+	<string>
+	<vector>
+
+1620264745 c:\users\khadija\documents\td1c\projet\jeu.h
+	<vector>
+	<string>
+	"Joueur.h"
+
+1620267213 source:c:\users\khadija\documents\td1c\projet\jeusolo.cpp
+	<iostream>
+	"Joueur.h"
+	"Jeu.h"
+	"Machine.h"
+	"Humain.h"
+	"JeuSolo.h"
+	<string>
+	<vector>
+
+1620267559 c:\users\khadija\documents\td1c\projet\jeu.cpp
+	<iostream>
+	"Joueur.h"
+	"Jeu.h"
+	"Machine.h"
+	"Humain.h"
+	<string>
+	<vector>
+
+1620262727 c:\users\khadija\documents\td1c\projet\jeusolo.h
+	<string>
+	"Jeu.h"
+	"Machine.h"
+	"Humain.h"
+	"Joueur.h"
+	<vector>
+
+1620267213 source:c:\users\khadija\documents\td1c\projet\jeumulti.cpp
+	<iostream>
+	"Joueur.h"
+	"Jeu.h"
+	"Machine.h"
+	"Humain.h"
+	"JeuMulti.h"
+	<string>
+	<vector>
+
+1620266599 c:\users\khadija\documents\td1c\projet\jeumulti.h
+	"Jeu.h"
+	"Joueur.h"
+	"Humain.h"
+	<string>
+	<vector>
+
+1620337540 c:\users\khadija\documents\td1c\projet\jeusolo.cpp
+	<iostream>
+	"Joueur.h"
+	"Jeu.h"
+	"Machine.h"
+	"Humain.h"
+	"JeuSolo.h"
+	<string>
+	<vector>
+
+1620337550 c:\users\khadija\documents\td1c\projet\jeumulti.cpp
+	<iostream>
+	"Joueur.h"
+	"Jeu.h"
+	"Machine.h"
+	"Humain.h"
+	"JeuMulti.h"
+	<string>
+	<vector>
+
+1620335431 c:\users\khadija\documents\td1c\projet\lecteur.h
+	<vector>
+	<string>
+
+1620335430 source:c:\users\khadija\documents\td1c\projet\lecteur.cpp
+	<iostream>
+	<string>
+	<vector>
+	"Lecteur.h"
+	<fstream>
+
+1620263572 source:c:\users\khadija\desktop\le_pendu\humain.cpp
+	<iostream>
+	<string>
+	"Humain.h"
+
+1620261081 c:\users\khadija\desktop\le_pendu\humain.h
+	<string>
+	"Joueur.h"
+
+1620261081 c:\users\khadija\desktop\le_pendu\joueur.h
+	<string>
+
+1620263056 source:c:\users\khadija\desktop\le_pendu\joueur.cpp
+	<iostream>
+	<string>
+	"Joueur.h"
+
+1620335430 source:c:\users\khadija\desktop\le_pendu\lecteur.cpp
+	<iostream>
+	<string>
+	<vector>
+	"Lecteur.h"
+	<fstream>
+
+1620335431 c:\users\khadija\desktop\le_pendu\lecteur.h
+	<vector>
+	<string>
+
+1620337399 source:c:\users\khadija\desktop\le_pendu\machine.cpp
+	<iostream>
+	<string.h>
+	<cstdlib>
+	"Machine.h"
+	"Joueur.h"
+	<string>
+	"Lecteur.h"
+	<cstdlib>
+	<ctime>
+
+1620334986 c:\users\khadija\desktop\le_pendu\machine.h
+	<string>
+	"Joueur.h"
+	"Lecteur.h"
+
+1620267684 source:c:\users\khadija\desktop\le_pendu\main.cpp
+	<iostream>
+	"Joueur.h"
+	<string>
+	<vector>
+	"Jeu.h"
+	"Jeu.cpp"
+	"JeuSolo.h"
+	"JeuSolo.cpp"
+	"JeuMulti.cpp"
+	"JeuMulti.h"
+	"Machine.h"
+	"Humain.h"
+
+1620264745 c:\users\khadija\desktop\le_pendu\jeu.h
+	<vector>
+	<string>
+	"Joueur.h"
+
+1620267559 c:\users\khadija\desktop\le_pendu\jeu.cpp
+	<iostream>
+	"Joueur.h"
+	"Jeu.h"
+	"Machine.h"
+	"Humain.h"
+	<string>
+	<vector>
+
+1620262727 c:\users\khadija\desktop\le_pendu\jeusolo.h
+	<string>
+	"Jeu.h"
+	"Machine.h"
+	"Humain.h"
+	"Joueur.h"
+	<vector>
+
+1620337540 c:\users\khadija\desktop\le_pendu\jeusolo.cpp
+	<iostream>
+	"Joueur.h"
+	"Jeu.h"
+	"Machine.h"
+	"Humain.h"
+	"JeuSolo.h"
+	<string>
+	<vector>
+
+1620337550 c:\users\khadija\desktop\le_pendu\jeumulti.cpp
+	<iostream>
+	"Joueur.h"
+	"Jeu.h"
+	"Machine.h"
+	"Humain.h"
+	"JeuMulti.h"
+	<string>
+	<vector>
+
+1620266599 c:\users\khadija\desktop\le_pendu\jeumulti.h
+	"Jeu.h"
+	"Joueur.h"
+	"Humain.h"
+	<string>
+	<vector>
+
