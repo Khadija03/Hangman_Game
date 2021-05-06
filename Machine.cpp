@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include "Machine.h"
 #include "Joueur.h"
-#include<string>
+#include <string>
 #include "Lecteur.h"
 #include <cstdlib>
 #include <ctime>
@@ -20,7 +20,7 @@ string  Machine::generer_mot()
     Lecteur l;
     int s ;
     srand(time(NULL));
-    s = rand() % (4000 + 1);
+    s = rand() % (500 + 1);
     v=l.extraireMots("french.txt");
     m=v[s];
     return m;
@@ -31,13 +31,13 @@ void Machine::jesuis()
 }
 char  Machine::proposer_lettre() //lettre aléatoire
 {
-    char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
     char c;
     size_t indice;
     srand(time(NULL));
     indice = rand() % (25 + 1);
     c = alphabet[indice];
-    cout <<"La lettre choisie par la machine est: "<<c << endl;
+    cout <<" a choisi la lettre "<<c << endl;
     return c;
 }
 

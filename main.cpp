@@ -10,6 +10,7 @@
 #include "JeuMulti.h"
 #include "Machine.h"
 #include "Humain.h"
+#define _GLIBCXX_USE_CXX11_ABI 0
 using namespace std;
 
 int main()
@@ -18,8 +19,9 @@ int main()
         char rep;
         do
         {
+        cout<<"Bienvenue dans le jeu du Pendu !"<<endl;
         cout<<"Vous voulez jouez seul ou avec des amis? "<<endl;
-        cout<<"choisisez S ou M"<<endl;
+        cout<<"Choisissez S pour solo ou M pour Multi : ";
         cin>>rep;
         }while ((rep!='S')&& (rep!='s')&&(rep!='M')&&(rep!='m'));
         if ((rep=='s')||(rep=='S'))

@@ -6,7 +6,7 @@
 #include"JeuMulti.h"
 #include<string>
 #include<vector>
-
+#define _GLIBCXX_USE_CXX11_ABI 0
 using namespace std;
 JeuMulti::JeuMulti(vector<Joueur*> j):Jeu(j)
 {
@@ -31,7 +31,7 @@ vector<Joueur*> JeuMulti::remplirliste()
 }
 int JeuMulti::nbJoueurs()
 {int nb;
-    cout<<"Donnez le nb de Joueurs: ";
+    cout<<"Donnez le nombre de joueurs: ";
     cin>>nb;
     return nb ;
 }
@@ -58,11 +58,12 @@ bool JeuMulti:: mot_devine(int k)
                 cout<<"TENTATIVE: "<<mot_tentative<<endl;
                 char c=choix(j);
                 if ((c=='O')||c=='o')
-                {   cout<<" Joueur "<<" ("<<(j+1)<<") mot? ";
+                {   cout<<*Joueurs[j];
                     string prop = Joueurs[j]->proposer_mot();
                     if (prop==mot)
                         {
                             cout<<"==> GAGNE !"<<endl;
+                            Joueurs[j]->setscore();
                             return true;
                         }
                           else{
@@ -93,7 +94,6 @@ bool JeuMulti:: mot_devine(int k)
                         //cout<<"essai"<<Joueurs[j].getessai()<<endl;
                         cout<<"Pas de chance:"<<endl;
                         Joueurs[j]->setmisses();
-                       // cout<<"misses"<<Joueurs[j].getmisses()<<endl;
                         Joueurs[j]->hangman(Joueurs[j]->getmisses());
                         if (estpendu(Joueurs[j]->getmisses()))
                         {

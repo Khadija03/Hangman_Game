@@ -34,7 +34,7 @@ void  Joueur::setscore()
 string  Joueur::proposer_mot()
 {
 string m;
-cout<<"Mot : ";
+cout<<" veuillez proposer votre mot : ";
 cin>>m;
 return m;
 }

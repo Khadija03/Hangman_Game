@@ -5,7 +5,7 @@
 #include "Humain.h"
 #include<string>
 #include<vector>
-
+#define _GLIBCXX_USE_CXX11_ABI 0
 using namespace std;
 Jeu::Jeu(vector<Joueur*> j): Joueurs(j)
 {}
@@ -14,7 +14,7 @@ Jeu::Jeu(vector<Joueur*> j): Joueurs(j)
 void Jeu::partie()
 {
     // Fait jouer chacun des Joueurs à tour de role
-    for (int k = 0; k < Joueurs.size()+1; ++k)
+    for (int k = 0; k < Joueurs.size(); ++k)
     {
         for(int i=0; i<Joueurs.size();i++)
         {
@@ -89,8 +89,8 @@ void Jeu::trait_display()
 }
 
 void Jeu::resultat()
-{   int m=0;
-    int c=0;
+{   int m=Joueurs[0]->getscore();
+    int c=-1;
     for(int i=0;i<Joueurs.size();i++)
     {
         if (Joueurs[i]->getscore()>m)
@@ -99,7 +99,9 @@ void Jeu::resultat()
             c=i;
         }
     }
-    cout<<"Le ganant est"<<*Joueurs[c]<<endl;
+    if (c!=-1)
+    {cout<<"Le ganant est "<<*Joueurs[c]<<endl;}
+    else {cout<<"Egalite ! ";}
 }
 
 bool Jeu:: mot_devine(int k)

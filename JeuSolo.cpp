@@ -43,16 +43,17 @@ bool JeuSolo:: mot_devine(int k)
                 ajouer = true;
                 // Affiche la tentative actuelle, le status du Joueur j et demande sa lettre proposee
                 cout<<"TENTATIVE: "<<mot_tentative<<endl;
-
+                //si cest le tour de lhumain
                 if (j%2==0)
                 {
                     char c=choix(j);
                     if ((c=='O')||c=='o')
-                    {   cout<<" Joueur "<<" ("<<(j+1)<<") mot? ";
+                    {   cout<<*Joueurs[j];
                         string prop = Joueurs[j]->proposer_mot();
                         if (prop==mot)
                             {
                                 cout<<"==> GAGNE !"<<endl;
+                                Joueurs[j]->setscore();
                                 return true;
                             }
                         else{
@@ -60,12 +61,12 @@ bool JeuSolo:: mot_devine(int k)
                             cout<<"Pas de chance:"<<endl;
                             Joueurs[j]->setmisses();
                             Joueurs[j]->hangman(Joueurs[j]->getmisses());
+                            cout<<endl;
                         }
                     }
                     else {
                         cout<<Joueurs[j]->getnom();
                         char lettre = Joueurs[j]->proposer_lettre();
-                        // Actualise le score du Joueur
                         if (lettre_existe(lettre))
                         {
                             update_display(lettre);
@@ -80,15 +81,14 @@ bool JeuSolo:: mot_devine(int k)
                         else
                         {
                             Joueurs[j]->setessai();
-                            cout<<"essai"<<Joueurs[j]->getessai()<<endl;
                             cout<<"Pas de chance:"<<endl;
                             Joueurs[j]->setmisses();
-                           cout<<"misses"<<Joueurs[j]->getmisses()<<endl;
                             Joueurs[j]->hangman(Joueurs[j]->getmisses());
+                            cout<<endl;
                             if (estpendu(Joueurs[j]->getmisses()))
                                 {
                                     cout<<"==> PERDU !"<<endl;
-                                    Joueurs[k]->setscore();
+                                    Joueurs[0]->setscore();
                                     return false;
                                 }
                             }
@@ -112,15 +112,14 @@ bool JeuSolo:: mot_devine(int k)
                         else
                         {
                             Joueurs[j]->setessai();
-                            cout<<"essai"<<Joueurs[j]->getessai()<<endl;
                             cout<<"Pas de chance:"<<endl;
                             Joueurs[j]->setmisses();
-                            cout<<"misses"<<Joueurs[j]->getmisses()<<endl;
                             Joueurs[j]->hangman(Joueurs[j]->getmisses());
+                            cout<<endl;
                             if (estpendu(Joueurs[j]->getmisses()))
                             {
                                 cout<<"==> PERDU !"<<endl;
-                                Joueurs[k]->setscore();
+                                Joueurs[1]->setscore();
                                 return false;
                             }
                             }
