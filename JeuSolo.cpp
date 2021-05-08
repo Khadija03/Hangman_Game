@@ -6,6 +6,7 @@
 #include"JeuSolo.h"
 #include<string>
 #include<vector>
+#include <windows.h>
 #define _GLIBCXX_USE_CXX11_ABI 0
 using namespace std;
 JeuSolo::JeuSolo(vector<Joueur*> j):Jeu(j)
@@ -22,8 +23,7 @@ vector<Joueur*> JeuSolo::remplirliste()
     Joueur* m=new Machine("Machine");
     //Machine m("Machine");
     Joueurs.push_back(m);
-    Joueurs[0]->jesuis();
-    Joueurs[1]->jesuis();
+
     return Joueurs;
 }
 
@@ -43,17 +43,21 @@ bool JeuSolo:: mot_devine(int k)
                 ajouer = true;
                 // Affiche la tentative actuelle, le status du Joueur j et demande sa lettre proposee
                 cout<<"TENTATIVE: "<<mot_tentative<<endl;
+                cout<<endl;
                 //si cest le tour de lhumain
                 if (j%2==0)
                 {
-                    char c=choix(j);
-                    if ((c=='O')||c=='o')
+
+                    cout<<Joueurs[j]->getnom();
+                    char lettre = Joueurs[j]->proposer_lettre();
+                    if (lettre=='0') //le joueur a choisi de proposer un mot complet
                     {   cout<<*Joueurs[j];
                         string prop = Joueurs[j]->proposer_mot();
                         if (prop==mot)
                             {
                                 cout<<"==> GAGNE !"<<endl;
                                 Joueurs[j]->setscore();
+                                pass();
                                 return true;
                             }
                         else{
@@ -65,16 +69,16 @@ bool JeuSolo:: mot_devine(int k)
                         }
                     }
                     else {
-                        cout<<Joueurs[j]->getnom();
-                        char lettre = Joueurs[j]->proposer_lettre();
                         if (lettre_existe(lettre))
                         {
                             update_display(lettre);
                             cout<<"Bravo "<<Joueurs[j]->getnom()<<" ! : "<<mot_tentative<<endl;
+                            cout<<endl;
                             if (mot_tentative == mot)
                             {
                                 Joueurs[j]->setscore();
-                                cout<<"Bravo "<<Joueurs[j]->getnom()<<" vous avez gagne ce tour !"<<endl;
+                                cout<<"Bravo "<<Joueurs[j]->getnom()<<" vous avez gagne ce tour !";
+                                pass();
                                 return true;
                             }
                         }
@@ -102,10 +106,12 @@ bool JeuSolo:: mot_devine(int k)
                         {
                             update_display(lettre);
                             cout<<"Bravo "<<Joueurs[j]->getnom()<<" ! : "<<mot_tentative<<endl;
+                            cout<<endl;
                             if (mot_tentative == mot)
                             {
                                 Joueurs[j]->setscore();
                                 cout<<"La Machine a gagne ce tour !"<<endl;
+                                pass();
                                 return true;
                             }
                         }
@@ -121,6 +127,7 @@ bool JeuSolo:: mot_devine(int k)
                                 cout<<"==> PERDU !"<<endl;
                                 Joueurs[1]->setscore();
                                 return false;
+
                             }
                             }
                         }
@@ -129,6 +136,7 @@ bool JeuSolo:: mot_devine(int k)
                 // Si aucun des Joueurs ne peut plus jouer: le Joueur k a gagne tous les points: on sort
                 if (not ajouer)
                 {
+
                 return false;
                 }
         }
@@ -140,6 +148,8 @@ JeuSolo::~JeuSolo()
 void JeuSolo::adeviner(int k)
 {       cout<<"Le mot numero "<<k+1<<" a ete choisi"<<endl;
         mot = Joueurs[1]->generer_mot();
+
+
 }
 
 

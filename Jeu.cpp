@@ -4,16 +4,28 @@
 #include "Machine.h"
 #include "Humain.h"
 #include<string>
+#include <limits>
+#include <windows.h>
 #include<vector>
 #define _GLIBCXX_USE_CXX11_ABI 0
 using namespace std;
 Jeu::Jeu(vector<Joueur*> j): Joueurs(j)
 {}
+void Jeu::pass()
+{
+    cin.clear();
+    cin.ignore(INT_MAX,'\n');
+    cout<<"Appuyez sur ENTRER pour continuer";
+    if (cin.get()==(int)'\n')
+    {system("cls");}
 
+
+}
 
 void Jeu::partie()
 {
-    // Fait jouer chacun des Joueurs à tour de role
+
+       // Fait jouer chacun des Joueurs à tour de role
     for (int k = 0; k < Joueurs.size(); ++k)
     {
         for(int i=0; i<Joueurs.size();i++)
@@ -23,15 +35,16 @@ void Jeu::partie()
         // Initialise le mot à deviner par le Joueur k
 
         adeviner(k);
+        cout<<"NB: Si vous voulez proposer un mot complet au lieu d'une lettre tapez 0 "<<endl;
         // Initialise la tentative
         trait_display();
         // Les Joueurs autres que k sont sollicites pour proposer des lettres
         bool b = mot_devine(k);
         if (not b)
-        {
-            cout<<"A Deviner etait: "<<mot<<endl;
-        }
+        {   cout<<"A Deviner etait: "<<mot<<endl;
+           pass();
 
+        }
     }
     resultat();
     }

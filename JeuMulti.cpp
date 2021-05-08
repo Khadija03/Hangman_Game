@@ -56,14 +56,16 @@ bool JeuMulti:: mot_devine(int k)
                 ajouer = true;
                 // Affiche la tentative actuelle, le status du Joueur j et demande sa lettre proposee
                 cout<<"TENTATIVE: "<<mot_tentative<<endl;
-                char c=choix(j);
-                if ((c=='O')||c=='o')
+                cout<<Joueurs[j]->getnom();
+                char lettre = Joueurs[j]->proposer_lettre();
+                if (lettre=='0')
                 {   cout<<*Joueurs[j];
                     string prop = Joueurs[j]->proposer_mot();
                     if (prop==mot)
                         {
-                            cout<<"==> GAGNE !"<<endl;
+                            cout<<"Bravo "<<Joueurs[j]->getnom()<<" vous avez gagne ce tour !"<<endl;
                             Joueurs[j]->setscore();
+                            pass();
                             return true;
                         }
                           else{
@@ -74,9 +76,6 @@ bool JeuMulti:: mot_devine(int k)
                         }
                 }
                 else {
-                    cout<<Joueurs[j]->getnom();
-                    char lettre = Joueurs[j]->proposer_lettre();
-                    // Actualise le score du Joueur
                     if (lettre_existe(lettre))
                     {
                         update_display(lettre);
@@ -104,6 +103,7 @@ bool JeuMulti:: mot_devine(int k)
                         }
                     }
         }
+
                 // Si aucun des Joueurs ne peut plus jouer: le Joueur k a gagne tous les points: on sort
                 if (not ajouer)
                 {

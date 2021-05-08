@@ -23,6 +23,7 @@ public:
     virtual void adeviner(int );
     char choix(int); //proposer_mot wala lettre?
     bool estpendu(int);
+    void pass();
     virtual ~Jeu();
 
 

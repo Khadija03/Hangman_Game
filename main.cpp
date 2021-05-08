@@ -17,10 +17,10 @@ int main()
 {
         vector <Joueur*> v;
         char rep;
-        do
-        {
         cout<<"Bienvenue dans le jeu du Pendu !"<<endl;
         cout<<"Vous voulez jouez seul ou avec des amis? "<<endl;
+        do
+        {
         cout<<"Choisissez S pour solo ou M pour Multi : ";
         cin>>rep;
         }while ((rep!='S')&& (rep!='s')&&(rep!='M')&&(rep!='m'));
@@ -28,6 +28,7 @@ int main()
        {
            Jeu * g=new JeuSolo(v);
             g->remplirliste();
+            system("cls");
             g->partie();
        }
        else
