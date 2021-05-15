@@ -18,10 +18,8 @@ vector<Joueur*> JeuSolo::remplirliste()
     cout<<"Donnez Votre nom "<<" : ";
     cin>>nom;
     Joueur * j1= new Humain(nom);
-    //Humain j1(nom);
     Joueurs.push_back( j1);
     Joueur* m=new Machine("Machine");
-    //Machine m("Machine");
     Joueurs.push_back(m);
 
     return Joueurs;
@@ -30,21 +28,21 @@ vector<Joueur*> JeuSolo::remplirliste()
 bool JeuSolo:: mot_devine(int k)
 {
       for(;;)
-       { bool ajouer = false;
+       { bool ajouer = false;//variable qui indique si au moins un joueur a reussi à jouer
         for (int j = 0; j < Joueurs.size(); j++)
         {
 
-                // Si le Joueur j ne peut pas jouer: passe au suivant
+                // Si le Joueur j a epuisé toutes ses chances on passe au suivant
                 if (estpendu(Joueurs[j]->getmisses()))
                 {
                     continue;
                 }
                 // au moins un Joueur a reussi a jouer
                 ajouer = true;
-                // Affiche la tentative actuelle, le status du Joueur j et demande sa lettre proposee
+                // Affiche la tentative actuelle
                 cout<<"TENTATIVE: "<<mot_tentative<<endl;
                 cout<<endl;
-                //si cest le tour de lhumain
+                //si c'est le tour de lhumain
                 if (j%2==0)
                 {
 
@@ -133,7 +131,7 @@ bool JeuSolo:: mot_devine(int k)
                         }
                 }
 
-                // Si aucun des Joueurs ne peut plus jouer: le Joueur k a gagne tous les points: on sort
+                // Si aucun des Joueurs ne peut plus jouer, le Joueur k a gagne tous les points
                 if (not ajouer)
                 {
 

@@ -68,56 +68,100 @@ void Joueur::hangman (int e )
 {
     switch(e) {
     case 1:
-        cout<<"Hangman de "<<nom_Joueur<<endl;
-        cout<<"     |      "<<endl;
-        break;
+            cout<<"Hangman de "<<nom_Joueur<<endl;
+            cout << endl;
+			cout << "     |--|     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "     ------   " << endl;
+			cout << endl;
+			break;
     case 2:
         cout<<"Hangman de "<<nom_Joueur<<endl;
-        cout<<"     |      "<<endl;
-        cout<<"     O      "<<endl;
-                break;
+        cout << endl;
+			cout << "     |--|     " << endl;
+			cout << "     O  |     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "     ------   " << endl;
+			cout << endl;
+			break;
     case 3:
         cout<<"Hangman de "<<nom_Joueur<<endl;
-        cout<<"     |      "<<endl;
-        cout<<"     O      "<<endl;
-        cout<<"     |      "<<endl;
-                break;
+        cout << endl;
+			cout << "     |--|     " << endl;
+			cout << "     O  |     " << endl;
+			cout << "     |  |     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "     ------   " << endl;
+			cout << endl;
+			break;
     case 4:
         cout<<"Hangman de "<<nom_Joueur<<endl;
-        cout<<"     |      "<<endl;
-        cout<<"     O      "<<endl;
-        cout<<"     |      "<<endl;
-        cout<<"     |      "<<endl;
-                break;
+       cout << endl;
+			cout << "     |--|     " << endl;
+			cout << "     O  |     " << endl;
+			cout << "     |  |     " << endl;
+			cout << "     |  |     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "     ------   " << endl;
+			cout << endl;
+			break;
     case 5:
         cout<<"Hangman de "<<nom_Joueur<<endl;
-        cout<<"     |      "<<endl;
-        cout<<"     O      "<<endl;
-        cout<<"    /|      "<<endl;
-        cout<<"     |      "<<endl;
-                break;
+        cout << endl;
+			cout << "     |--|     " << endl;
+			cout << "     O  |     " << endl;
+			cout << "    /|  |     " << endl;
+			cout << "     |  |     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "     ------   " << endl;
+			cout << endl;
+			break;
     case 6:
         cout<<"Hangman de "<<nom_Joueur<<endl;
-        cout<<"     |      "<<endl;
-        cout<<"     O      "<<endl;
-        cout<<"    /|\\     "<<endl;
-        cout<<"     |      "<<endl;
-                break;
+        cout << endl;
+			cout << "     |--|     " << endl;
+			cout << "     O  |     " << endl;
+			cout << "    /|\\ |     " << endl;
+			cout << "     |  |     " << endl;
+			cout << "        |     " << endl;
+			cout << "        |     " << endl;
+			cout << "     ------   " << endl;
+			cout << endl;
+			break;
     case 7:
         cout<<"Hangman de "<<nom_Joueur<<endl;
-        cout<<"     |      "<<endl;
-        cout<<"     O      "<<endl;
-        cout<<"    /|\\     "<<endl;
-        cout<<"     |      "<<endl;
-        cout<<"    /       "<<endl;
-                break;
+            cout << endl;
+			cout << "     |--|     " << endl;
+			cout << "     O  |     " << endl;
+			cout << "    /|\\ |     " << endl;
+			cout << "     |  |     " << endl;
+			cout << "    /   |     " << endl;
+			cout << "        |     " << endl;
+			cout << "     ------   " << endl;
+			cout << endl;
+			break;
     default:
         cout<<"Hangman de "<<nom_Joueur<<endl;
-        cout<<"     |      "<<endl;
-        cout<<"     O      "<<endl;
-        cout<<"    /|\\     "<<endl;
-        cout<<"     |      "<<endl;
-        cout<<"    / \\     "<<endl;
+        cout << endl;
+			cout << "     |--|     " << endl;
+			cout << "     O  |     " << endl;
+			cout << "    /|\\ |     " << endl;
+			cout << "     |  |     " << endl;
+			cout << "    / \\ |     " << endl;
+			cout << "        |     " << endl;
+			cout << "     ------   " << endl;
+			cout << endl;
 
 
 

@@ -140,11 +140,11 @@
 	<string>
 	"Humain.h"
 
-1620261081 c:\users\khadija\desktop\le_pendu\humain.h
+1621108919 c:\users\khadija\desktop\le_pendu\humain.h
 	<string>
 	"Joueur.h"
 
-1620261081 c:\users\khadija\desktop\le_pendu\joueur.h
+1621109016 c:\users\khadija\desktop\le_pendu\joueur.h
 	<string>
 
 1620340312 source:c:\users\khadija\desktop\le_pendu\joueur.cpp
@@ -179,7 +179,7 @@
 	"Joueur.h"
 	"Lecteur.h"
 
-1620391395 source:c:\users\khadija\desktop\le_pendu\main.cpp
+1621109937 source:c:\users\khadija\desktop\le_pendu\main.cpp
 	<iostream>
 	"Joueur.h"
 	<string>
@@ -193,7 +193,7 @@
 	"Machine.h"
 	"Humain.h"
 
-1620386777 c:\users\khadija\desktop\le_pendu\jeu.h
+1621106575 c:\users\khadija\desktop\le_pendu\jeu.h
 	<vector>
 	<string>
 	"Joueur.h"
@@ -217,7 +217,7 @@
 	"Joueur.h"
 	<vector>
 
-1620394164 c:\users\khadija\desktop\le_pendu\jeusolo.cpp
+1621109426 c:\users\khadija\desktop\le_pendu\jeusolo.cpp
 	<iostream>
 	"Joueur.h"
 	"Jeu.h"
@@ -228,7 +228,7 @@
 	<vector>
 	<windows.h>
 
-1620391910 c:\users\khadija\desktop\le_pendu\jeumulti.cpp
+1621109620 c:\users\khadija\desktop\le_pendu\jeumulti.cpp
 	<iostream>
 	"Joueur.h"
 	"Jeu.h"

@@ -10,7 +10,7 @@ class Humain : public Joueur
       Humain( string);
       string generer_mot() ;
       char proposer_lettre();
-      void jesuis();
+      void jesuis();//fonction pour verifier le types des instances
       ~Humain();
 
       };

@@ -17,7 +17,8 @@ int main()
 {
         vector <Joueur*> v;
         char rep;
-        cout<<"Bienvenue dans le jeu du Pendu !"<<endl;
+        cout << "_______________________________________" << endl;
+        cout<<"_______________LE PENDU________________" << endl;
         cout<<"Vous voulez jouez seul ou avec des amis? "<<endl;
         do
         {

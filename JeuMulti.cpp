@@ -22,10 +22,6 @@ vector<Joueur*> JeuMulti::remplirliste()
        Joueur * j1= new Humain(nom);
         Joueurs.push_back( j1);
     }
-    for (int k=0;k<nb;k++)
-    {
-      cout<<*Joueurs[k]<<endl;
-    }
 
     return Joueurs;
 }
@@ -38,10 +34,10 @@ int JeuMulti::nbJoueurs()
 bool JeuMulti:: mot_devine(int k)
 {
       for(;;)
-       { bool ajouer = false;
+       { bool ajouer = false;//variable qui indique si au moins un joueur a réussi à jouer
         for (int j = 0; j < Joueurs.size(); j++)
         {
-        // Le Joueur k a propose le mot: on le saute
+        // Le Joueur k a propose le mot alors on le saute
                 if (j == k)
                 {
                     continue;
@@ -54,11 +50,11 @@ bool JeuMulti:: mot_devine(int k)
                 }
                 // au moins un Joueur a reussi a jouer
                 ajouer = true;
-                // Affiche la tentative actuelle, le status du Joueur j et demande sa lettre proposee
+                // Affiche la tentative actuelle et demande sa lettre proposee
                 cout<<"TENTATIVE: "<<mot_tentative<<endl;
                 cout<<Joueurs[j]->getnom();
                 char lettre = Joueurs[j]->proposer_lettre();
-                if (lettre=='0')
+                if (lettre=='0')//le joueur a choisi de proposer un mot complet
                 {   cout<<*Joueurs[j];
                     string prop = Joueurs[j]->proposer_mot();
                     if (prop==mot)
@@ -84,13 +80,13 @@ bool JeuMulti:: mot_devine(int k)
                         {
                             Joueurs[j]->setscore();
                             cout<<"Bravo "<<Joueurs[j]->getnom()<<" vous avez gagne ce tour !"<<endl;
+                            pass();
                             return true;
                         }
                     }
                     else
                     {
                         Joueurs[j]->setessai();
-                        //cout<<"essai"<<Joueurs[j].getessai()<<endl;
                         cout<<"Pas de chance:"<<endl;
                         Joueurs[j]->setmisses();
                         Joueurs[j]->hangman(Joueurs[j]->getmisses());
@@ -104,7 +100,7 @@ bool JeuMulti:: mot_devine(int k)
                     }
         }
 
-                // Si aucun des Joueurs ne peut plus jouer: le Joueur k a gagne tous les points: on sort
+                // Si aucun des Joueurs ne peut plus jouer, le Joueur k a gagne tous les points
                 if (not ajouer)
                 {
                 return false;
@@ -120,4 +116,5 @@ void JeuMulti::adeviner(int k)
 {
         cout<<Joueurs[k]->getnom();
         mot = Joueurs[k]->generer_mot();
+        system("cls");
 }
