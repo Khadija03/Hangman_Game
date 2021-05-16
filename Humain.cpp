@@ -9,7 +9,7 @@ Humain::Humain(string nom):Joueur(nom)
 
 string  Humain::generer_mot()
 {
-cout<<" proposez un mot à faire deviner "<<endl;
+cout<<" proposez un mot a faire deviner "<<endl;
 string m;
 cin>>m;
 return m;

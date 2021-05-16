@@ -90,7 +90,6 @@ bool JeuSolo:: mot_devine(int k)
                             if (estpendu(Joueurs[j]->getmisses()))
                                 {
                                     cout<<"==> PERDU !"<<endl;
-                                    Joueurs[0]->setscore();
                                     return false;
                                 }
                             }
@@ -123,7 +122,6 @@ bool JeuSolo:: mot_devine(int k)
                             if (estpendu(Joueurs[j]->getmisses()))
                             {
                                 cout<<"==> PERDU !"<<endl;
-                                Joueurs[1]->setscore();
                                 return false;
 
                             }

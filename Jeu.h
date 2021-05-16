@@ -24,6 +24,7 @@ public:
     char choix(int); //proposer_mot wala lettre?
     bool estpendu(int);//indique si le nombre total d'erreurs est atteint
     void pass();//fonction pour l'affichage
+    void tabscore();
     virtual ~Jeu();
 
 

@@ -45,6 +45,7 @@ void Jeu::partie()
            pass();
 
         }
+        tabscore();
     }
     resultat();
     }
@@ -100,21 +101,58 @@ void Jeu::trait_display()
 {
     mot_tentative = string(mot.size(), '_');
 }
-
+void Jeu::tabscore()
+{   cout << "___________________________________"<<endl;
+    cout << "________le tableau des scores______"<<endl;
+    for(int f=0;f<Joueurs.size();f++)
+    {
+    cout<<"le score de "<<Joueurs[f]->getnom()<<" est: "<<Joueurs[f]->getscore()<<endl;
+    }
+    cout<<endl;
+}
 void Jeu::resultat()
-{   int m=Joueurs[0]->getscore();
-    int c=-1;
+{
+    int m=Joueurs[0]->getscore();
+
     for(int i=0;i<Joueurs.size();i++)
     {
         if (Joueurs[i]->getscore()>m)
         {
             m=Joueurs[i]->getscore();
-            c=i;
         }
     }
-    if (c!=-1)
-    {cout<<"Le ganant est "<<*Joueurs[c]<<endl;}
-    else {cout<<"Egalite ! ";}
+    vector<Joueur*> v;
+    for(int i=0;i<Joueurs.size();i++)
+    {
+        if (Joueurs[i]->getscore()==m)
+        {
+            v.push_back(Joueurs[i]);
+        }
+    }
+
+    if (v.size()>1)
+    {
+    cout<<"On a une egalite!"<<endl;
+    cout<<"les gagnants sont: "<<endl;
+    for(int c=0;c<v.size();c++)
+    {
+        cout<<v[c]->getnom()<<",";
+    }
+    cout<<endl;
+    }
+
+    else
+    {
+    cout<<"Le gagnant est: ";
+    for(int c=0;c<Joueurs.size();c++)
+    {
+       if (m==Joueurs[c]->getscore())
+    {cout<<Joueurs[c]->getnom()<<endl;}
+    break;
+    }
+
+    }
+
 }
 
 bool Jeu:: mot_devine(int k)
