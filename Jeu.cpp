@@ -22,6 +22,7 @@ void Jeu::pass()
 
 }
 
+
 void Jeu::partie()
 {
 
@@ -133,11 +134,12 @@ void Jeu::resultat()
     if (v.size()>1)
     {
     cout<<"On a une egalite!"<<endl;
-    cout<<"les gagnants sont: "<<endl;
+    if (v[0]->getscore()!=0)
+    {cout<<"les gagnants sont: "<<endl;
     for(int c=0;c<v.size();c++)
     {
-        cout<<v[c]->getnom()<<",";
-    }
+        cout<<v[c]->getnom()<<" ";
+    }}
     cout<<endl;
     }
 
