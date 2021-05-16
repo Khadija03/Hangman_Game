@@ -144,16 +144,12 @@ void Jeu::resultat()
     else
     {
     cout<<"Le gagnant est: ";
-    for(int c=0;c<Joueurs.size();c++)
-    {
-       if (m==Joueurs[c]->getscore())
-    {cout<<Joueurs[c]->getnom()<<endl;}
-    break;
+    cout<<v[0]->getnom()<<endl;
     }
 
     }
 
-}
+
 
 bool Jeu:: mot_devine(int k)
 {
