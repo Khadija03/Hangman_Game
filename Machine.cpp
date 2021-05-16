@@ -21,7 +21,7 @@ string  Machine::generer_mot()
     int s ;
     srand(time(NULL));
     s = rand() % (1000 + 1);
-    v=l.extraireMots("french.txt");
+    v=l.extraireMots("data.txt");
     m=v[s];
     return m;
 }
