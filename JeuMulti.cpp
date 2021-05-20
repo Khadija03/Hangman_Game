@@ -27,8 +27,9 @@ vector<Joueur*> JeuMulti::remplirliste()
 }
 int JeuMulti::nbJoueurs()
 {int nb;
+    do{
     cout<<"Donnez le nombre de joueurs: ";
-    cin>>nb;
+    cin>>nb;} while((nb==1)||(nb>=10));
     return nb ;
 }
 bool JeuMulti:: mot_devine(int k)

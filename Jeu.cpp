@@ -130,11 +130,16 @@ void Jeu::resultat()
             v.push_back(Joueurs[i]);
         }
     }
+    bool test=true;
+    if (v.size()==Joueurs.size())
+    {
+        test=false;
+    }
 
     if (v.size()>1)
     {
     cout<<"On a une egalite!"<<endl;
-    if (v[0]->getscore()!=0)
+    if ((v[0]->getscore()!=0)&& test)
     {cout<<"les gagnants sont: "<<endl;
     for(int c=0;c<v.size();c++)
     {
