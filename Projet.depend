@@ -135,12 +135,12 @@
 	"Lecteur.h"
 	<fstream>
 
-1621170336 source:c:\users\khadija\desktop\le_pendu\humain.cpp
+1621550946 source:c:\users\khadija\desktop\le_pendu\humain.cpp
 	<iostream>
 	<string>
 	"Humain.h"
 
-1621108919 c:\users\khadija\desktop\le_pendu\humain.h
+1621550617 c:\users\khadija\desktop\le_pendu\humain.h
 	<string>
 	"Joueur.h"
 
@@ -228,7 +228,7 @@
 	<vector>
 	<windows.h>
 
-1621543495 c:\users\khadija\desktop\le_pendu\jeumulti.cpp
+1621550430 c:\users\khadija\desktop\le_pendu\jeumulti.cpp
 	<iostream>
 	"Joueur.h"
 	"Jeu.h"

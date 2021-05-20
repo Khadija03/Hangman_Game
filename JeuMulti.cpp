@@ -26,11 +26,25 @@ vector<Joueur*> JeuMulti::remplirliste()
     return Joueurs;
 }
 int JeuMulti::nbJoueurs()
-{int nb;
-    do{
-    cout<<"Donnez le nombre de joueurs: ";
-    cin>>nb;} while((nb==1)||(nb>=10));
-    return nb ;
+{
+    int nb = -1;
+    bool test= false;
+    do
+    {
+        cout << "Donnez le nombre de joueurs: " << flush;
+        cin >> nb;
+        if (cin.good())
+        {
+            test = true;
+        }
+        else
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(),'\n');
+            cout << "Ceci n'est pas un nombre veuillez reessayer! " << endl;
+        }
+    } while ((!test)||(nb==1)||(nb>=10));
+    return nb;
 }
 bool JeuMulti:: mot_devine(int k)
 {
